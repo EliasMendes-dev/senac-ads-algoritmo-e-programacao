@@ -107,8 +107,7 @@ class Aula3 {
         int numeroquatro = scanner.nextInt();
 
         System.out.println(
-                "Soma dos números informados: "
-                        + (numeroum + numerodois + numerotres + numeroquatro)
+                "Soma dos números informados: " + (numeroum + numerodois + numerotres + numeroquatro)
         );
     }
 
@@ -132,17 +131,13 @@ class Aula3 {
     private static void exercicio7() {
         System.out.println("\nExercicio 7:");
 
-        System.out.println("(20 - 15)/2 = " + (20 - 15) / 2);
+        System.out.println("O Resultado de (20 - 15)/2 é = " + (20 - 15) / 2);
 
-        System.out.println(
-                "2 ^ (5/20) + 30 / (15 ^ 2) = "
-                        + Math.pow(2, 5.0 / 20.0)
-                        + 30.0 / Math.pow(15, 2)
-        );
+        System.out.println("O Resultado de 2 ^ (5/20) + 30 / (15 ^ 2) é = " + Math.pow(2, 5.0 / 20.0) + 30.0 / Math.pow(15, 2));
 
-        System.out.println("35 / (6 + 2) = " + 35 / (6 + 2));
+        System.out.println("O Resultado de 35 / (6 + 2) é = " + 35 / (6 + 2));
 
-        System.out.println("23 módulo 4 = " + 23 % 4);
+        System.out.println("O Resultado de23 módulo 4 é = " + 23 % 4);
     }
 
     @SuppressWarnings("unused")
