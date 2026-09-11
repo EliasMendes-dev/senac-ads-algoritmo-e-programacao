@@ -5,38 +5,23 @@ class DesvioCondicional {
 
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-
-        if (false) {
-            exercicio1();
-            exercicio2();
-            exercicio3();
-            exercicio4();
-            exercicio5();
-            exercicio7();
-            exercicio8();
-            exercicio9();
-            exercicio10();
-            exercicio11();
-            exercicio12();
-            exercicio13();
-            desafio();
-        }
+        
+        exercicio1();
+        exercicio2();
+        exercicio3();
+        exercicio4();
+        exercicio5();
+        exercicio7();
         exercicio6();
-
+        exercicio8();
+        exercicio9();
+        exercicio10();
+        exercicio11();
+        exercicio12();
+        exercicio13();
+        desafio();
+        
         scanner.close();
-    }
-
-    public static void jogo() {
-
-        System.out.print("Digite o número do Jogador 1 na fase 1. ");
-        Double pontos = scanner.nextDouble();
-
-        if (pontos >= 1000) {
-            System.out.println("Parabéns! Você passou para a fase 2.");
-        } else {
-            System.out.println("Você não atingiu a pontuação necessária. Tente novamente.");
-        }
-        System.out.println("Siga para a próxima etapa. ");
     }
 
     private static void exercicio1() {
@@ -106,7 +91,21 @@ class DesvioCondicional {
     }
 
     private static void exercicio6() {
+        System.out.print("Informe a sua altura (em metros, ex: 1.75): ");
+        double altura = scanner.nextDouble();
 
+        System.out.print("Informe o seu sexo (M para Masculino, F para Feminino): ");
+        char sexo = scanner.next().toUpperCase().charAt(0);
+
+        if (sexo == 'M') {
+            double pesoIdeal = (72.7 * altura) - 58;
+            System.out.println("Seu peso ideal é: " + pesoIdeal + " kg");
+        } else if (sexo == 'F') {
+            double pesoIdeal = (62.1 * altura) - 44.7;
+            System.out.println("Seu peso ideal é: " + pesoIdeal + " kg");
+        } else {
+            System.out.println("Sexo inválido! Por favor, digite M ou F.");
+        }
     }
 
     private static void exercicio7() {
@@ -252,7 +251,6 @@ class DesvioCondicional {
     }
 
     private static void desafio() {
-        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Informe sua idade: ");
         int idade = scanner.nextInt();
@@ -282,6 +280,5 @@ class DesvioCondicional {
                     "Você NÃO ESTÁ APTO a votar nesta seção. É obrigatória a apresentação de um documento oficial válido com foto.");
         }
 
-        scanner.close();
     }
 }
