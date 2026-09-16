@@ -5,7 +5,6 @@ import java.util.Scanner;
 class DesvioCondicional {
     static Scanner scanner = new Scanner(System.in);
 
-    @SuppressWarnings("unused")
     public static void main(String[] args) {
         
         exercicio1();
