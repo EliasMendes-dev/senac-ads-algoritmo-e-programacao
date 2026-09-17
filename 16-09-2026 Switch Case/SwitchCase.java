@@ -1,3 +1,5 @@
+// Nome: José Elias Hermínio Mendes
+
 import java.util.Scanner;
 
 class SwitchCase {
@@ -8,6 +10,8 @@ class SwitchCase {
         exercicio2();
         exercicio3();
         exercicio4();
+        exercicio5();
+        exercicio6();
 
         scanner.close();
     }
