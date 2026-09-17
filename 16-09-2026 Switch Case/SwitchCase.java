@@ -101,9 +101,9 @@ class SwitchCase {
 
     public static void exercicio3() {
         System.out.println(
-                "O algoritmo vai ler o período em que o aluno estuda");
+                "O algoritmo vai ler o período em que o aluno estuda (M, V ou N):");
 
-        String escolha = scanner.next();
+        String escolha = scanner.next().toUpperCase();
 
         switch (escolha) {
             case "M":
@@ -125,7 +125,8 @@ class SwitchCase {
         System.out.println("O funcionário receberá aumento de acordo com seu plano de trabalho.");
 
         System.out.println("Informe o plano de trabalho do funcionário (A, B ou C):");
-        String plano = scanner.nextLine();
+        
+        String plano = scanner.next().toUpperCase();
 
         System.out.println("Informe o salário atual do funcionário:");
         double salarioAtual = scanner.nextDouble();
@@ -144,7 +145,7 @@ class SwitchCase {
                 break;
             default:
                 System.out.println("Plano inválido!");
-                return; // Sai do método se o plano for inválido
+                return;
         }
         System.out.println("O aumento salarial será de: R$ " + String.format("%.2f", aumento));
     }
@@ -158,7 +159,8 @@ class SwitchCase {
 
         System.out.println("Os números digitados foram: " + num1 + " e " + num2);
         System.out.println("Informe a operação desejada (M, S, P ou D):");
-        String operacao = scanner.nextLine();
+        
+        String operacao = scanner.next().toUpperCase();
 
         switch (operacao) {
             case "M":
@@ -188,54 +190,55 @@ class SwitchCase {
     }
 
     public static void exercicio6() {
+
         System.out.println("Dado o cardápio de uma lanchonete: ");
         System.out.println(
                 "Código - Produto - Preço\n" +
-                        "100 - Cachorro Quente - R$ 1,20\n" +
-                        "101 - Bauru Simples - R$ 1,30\n" +
-                        "102 - Bauru com Ovo - R$ 1,50\n" +
-                        "103 - Hambúrguer - R$ 1,20\n" +
-                        "104 - Cheeseburguer - R$ 1,30\n" +
-                        "105 - Refrigerante - R$ 1,00");
+                "100 - Cachorro Quente - R$ 1,20\n" +
+                "101 - Bauru Simples - R$ 1,30\n" +
+                "102 - Bauru com Ovo - R$ 1,50\n" +
+                "103 - Hambúrguer - R$ 1,20\n" +
+                "104 - Cheeseburguer - R$ 1,30\n" +
+                "105 - Refrigerante - R$ 1,00");
 
         System.out.println("Informe o código do produto desejado:");
+        int codigo = scanner.nextInt();
 
         System.out.println("Informe a quantidade desse produto desejada:");
-
-        int codigo = scanner.nextInt();
         int quantidade = scanner.nextInt();
+        
         double total = 0.0;
 
         switch (codigo) {
             case 100:
                 System.out.println("Cachorro Quente - R$ 1,20");
                 total = 1.20 * quantidade;
-                System.out.println("Total: R$ " + String.format("%.2f", total));
+                System.out.printf("Total: R$ %.2f%n", total);
                 break;
             case 101:
                 System.out.println("Bauru Simples - R$ 1,30");
                 total = 1.30 * quantidade;
-                System.out.println("Total: R$ " + String.format("%.2f", total));
+                System.out.printf("Total: R$ %.2f%n", total);
                 break;
             case 102:
                 System.out.println("Bauru com Ovo - R$ 1,50");
                 total = 1.50 * quantidade;
-                System.out.println("Total: R$ " + String.format("%.2f", total));
+                System.out.printf("Total: R$ %.2f%n", total);
                 break;
             case 103:
                 System.out.println("Hambúrguer - R$ 1,20");
                 total = 1.20 * quantidade;
-                System.out.println("Total: R$ " + String.format("%.2f", total));
+                System.out.printf("Total: R$ %.2f%n", total);
                 break;
             case 104:
                 System.out.println("Cheeseburguer - R$ 1,30");
                 total = 1.30 * quantidade;
-                System.out.println("Total: R$ " + String.format("%.2f", total));
+                System.out.printf("Total: R$ %.2f%n", total);
                 break;
             case 105:
                 System.out.println("Refrigerante - R$ 1,00");
                 total = 1.00 * quantidade;
-                System.out.println("Total: R$ " + String.format("%.2f", total));
+                System.out.printf("Total: R$ %.2f%n", total);
                 break;
             default:
                 System.out.println("Código do produto inválido!");
