@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Media {
 
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         int contador;
         double nota, media, acumuladorNotas;

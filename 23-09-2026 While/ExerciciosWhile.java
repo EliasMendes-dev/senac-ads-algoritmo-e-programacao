@@ -1,3 +1,9 @@
+/*
+Nome do Aluno: José Elias Hermínio Mendes
+Data: 23/09/2026
+Exercícios de repetição com while e do..while
+*/
+
 import java.util.Scanner;
 
 public class ExerciciosWhile {
