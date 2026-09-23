@@ -13,8 +13,8 @@ public class Media {
 
         while (contador < 5) {
             contador++;
-            System.out.println("Digite uma nota " + contador); nota =
-            entrada.nextInt();
+            System.out.println("Digite uma nota " + contador);
+            nota = entrada.nextInt();
             acumuladorNotas = acumuladorNotas + nota;
         }
 

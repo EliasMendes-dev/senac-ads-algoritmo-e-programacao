@@ -13,7 +13,7 @@ public class Validacao {
             System.out.println("***** Digite uma nota *****");
             nota = entrada.nextDouble();
 
-        }while (nota < 0 || nota > 10);
+        } while (nota < 0 || nota > 10);
 
         System.out.println("Nota correta");
 
