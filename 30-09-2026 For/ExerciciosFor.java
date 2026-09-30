@@ -7,7 +7,7 @@ class ExerciciosFor {
         exercicio5();
         exercicio6();
         exercicio7();
-        
+
         if (false) {
             exercicio1();
             exercicio2();
@@ -91,25 +91,25 @@ class ExerciciosFor {
         // d) O total de alunos de exame.
         // e) O total de alunos reprovados.
         // f) A média da classe.
-    
+
         int totalAlunos = 6;
         int totalAprovados = 0;
         int totalExame = 0;
         int totalReprovados = 0;
         double somaMedias = 0;
-    
+
         for (int i = 1; i <= totalAlunos; i++) {
             System.out.println("Aluno " + i + ", informe a primeira nota: ");
             double nota1 = scanner.nextDouble();
-    
+
             System.out.println("Aluno " + i + ", informe a segunda nota: ");
             double nota2 = scanner.nextDouble();
-    
+
             double media = (nota1 + nota2) / 2;
             somaMedias += media;
-    
+
             System.out.printf("A média do aluno %d é: %.2f%n", i, media);
-    
+
             if (media <= 3) {
                 System.out.println("REPROVADO");
                 totalReprovados++;
@@ -121,9 +121,9 @@ class ExerciciosFor {
                 totalAprovados++;
             }
         }
-    
+
         double mediaClasse = somaMedias / totalAlunos;
-    
+
         System.out.println("Total de alunos aprovados: " + totalAprovados);
         System.out.println("Total de alunos de exame: " + totalExame);
         System.out.println("Total de alunos reprovados: " + totalReprovados);
@@ -133,7 +133,10 @@ class ExerciciosFor {
     public static void exercicio6() {
         // Exercício 6
         // Em uma eleição presidencial, existem quatro candidatos.
-        // Os votos são informados através de um código: 1, 2, 3 ou 4 - Voto para o respectivo candidato 5 - Voto nulo 6 - Voto em branco
+        // Os votos são informados através de um código: 1, 2, 3 ou 4 - Voto para o
+        // respectivo candidato
+        // 5 - Voto nulo
+        // 6 - Voto em branco
         // Faça um algoritmo que leia o voto de 10 eleitores.
         // Calcule e mostre:
         // ¨ a) O total de votos para cada candidato;
@@ -156,11 +159,33 @@ class ExerciciosFor {
         int contagemNulo = 0;
         int contagemEmBranco = 0;
 
-        for(int i = 1; i <= numeroEleitores; i++ ) {
-            System.out.println("Candidato 1 ");
-        }
-        
+        for (int i = 1; i <= numeroEleitores; i++) {
+            System.out.printf("Eleitor %d, digite seu voto: ", i);
+            int voto = scanner.nextInt();
 
+            switch (voto) {
+                case 1 -> contagemCandidato1++;
+                case 2 -> contagemCandidato2++;
+                case 3 -> contagemCandidato3++;
+                case 4 -> contagemCandidato4++;
+                case 5 -> contagemNulo++;
+                case 6 -> contagemEmBranco++;
+                default -> System.out.println("Voto inválido!");
+            }
+        }
+
+        int totalVotos = contagemCandidato1 + contagemCandidato2 + contagemCandidato3 + contagemCandidato4
+                + contagemNulo + contagemEmBranco;
+        double percentualBrancosENulos = ((double) (contagemNulo + contagemEmBranco) / totalVotos) * 100;
+
+        System.out.println("Resultado da votação:");
+        System.out.println("Candidato 1: " + contagemCandidato1 + " votos");
+        System.out.println("Candidato 2: " + contagemCandidato2 + " votos");
+        System.out.println("Candidato 3: " + contagemCandidato3 + " votos");
+        System.out.println("Candidato 4: " + contagemCandidato4 + " votos");
+        System.out.println("Votos nulos: " + contagemNulo);
+        System.out.println("Votos em branco: " + contagemEmBranco);
+        System.out.printf("Percentual de votos brancos e nulos: %.2f%%%n", percentualBrancosENulos);
     }
 
     public static void exercicio7() {
@@ -170,5 +195,44 @@ class ExerciciosFor {
         // a) A quantidade de pessoas maiores de 50 anos.
         // b) A média das alturas das pessoas com idade entre 10 e 20 anos.
         // c) A porcentagem de pessoas com peso inferior a 40 quilos.
+
+        int totalPessoas = 10;
+        int pessoasMaisDe50 = 0;
+        double somaAlturasEntre10e20 = 0;
+        int contadorEntre10e20 = 0;
+        int pessoasPesoMenor40 = 0;
+
+        for (int i = 1; i <= totalPessoas; i++) {
+            System.out.printf("Pessoa %d, informe sua idade: ", i);
+            int idade = scanner.nextInt();
+
+            System.out.printf("Pessoa %d, informe sua altura (em metros): ", i);
+            double altura = scanner.nextDouble();
+
+            System.out.printf("Pessoa %d, informe seu peso (em quilos): ", i);
+            double peso = scanner.nextDouble();
+
+            if (idade > 50) {
+                pessoasMaisDe50++;
+            }
+
+            if (idade >= 10 && idade <= 20) {
+                somaAlturasEntre10e20 += altura;
+                contadorEntre10e20++;
+            }
+
+            if (peso < 40) {
+                pessoasPesoMenor40++;
+            }
+        }
+
+        double mediaAlturasEntre10e20 = (contadorEntre10e20 > 0) ? somaAlturasEntre10e20 / contadorEntre10e20 : 0;
+        double percentualPesoMenor40 = ((double) pessoasPesoMenor40 / totalPessoas) * 100;
+
+        System.out.println("Resultados:");
+        System.out.println("Quantidade de pessoas com mais de 50 anos: " + pessoasMaisDe50);
+        System.out.printf("Média das alturas das pessoas com idade entre 10 e 20 anos: %.2f metros%n",
+                mediaAlturasEntre10e20);
+        System.out.printf("Percentual de pessoas com peso inferior a 40 quilos: %.2f%%%n", percentualPesoMenor40);
     }
 }
