@@ -4,17 +4,13 @@ class ExerciciosFor {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        exercicio1();
+        exercicio2();
+        exercicio3();
+        exercicio4();
         exercicio5();
         exercicio6();
         exercicio7();
-
-        if (false) {
-            exercicio1();
-            exercicio2();
-            exercicio3();
-            exercicio4();
-        }
-
         scanner.close();
     }
 
