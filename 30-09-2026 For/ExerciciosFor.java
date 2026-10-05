@@ -1,3 +1,4 @@
+// José Elias Hermínio Mendes
 import java.util.Scanner;
 
 class ExerciciosFor {
